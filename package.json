@@ -1,0 +1,23 @@
+{
+  "name": "sawyerlin.github.io",
+  "version": "0.0.1",
+  "description": "sawyer git site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/http-server/bin/http-server ./app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sawyerlin/sawyerlin.github.io.git"
+  },
+  "author": "slin",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/sawyerlin/sawyerlin.github.io/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "http-server": "~0.8.0"
+  }
+}

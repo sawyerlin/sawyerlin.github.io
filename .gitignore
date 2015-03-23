@@ -1,0 +1,9 @@
+# vim
+*.swo
+*.swp
+
+# nodejs
+node_modules/
+
+# bower
+bower_components/
