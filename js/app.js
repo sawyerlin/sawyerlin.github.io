@@ -23,6 +23,9 @@
                 .when('/contact', {
                     templateUrl: 'templates/contact.html',
                     controller: 'ContactController'
+                })
+                .otherwise({
+                    redirectTo: 'home'
                 });
         }
     ]);
