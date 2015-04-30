@@ -3,10 +3,13 @@
 
     var sawyerApp = angular.module('sawyerApp', [
             'ngRoute',
-            'sawyerControllers'
+            'sawyerControllers',
+            'hc.marked'
         ]);
 
-    sawyerApp.config(['$routeProvider', function($routeProvider) {
+    sawyerApp.config(['$routeProvider', 'markedProvider', function($routeProvider, $markedProvider) {
+            $markedProvider.setOptions({gfm: true});
+
             $routeProvider
                 .when('/home', {
                     templateUrl: 'templates/home.html',
@@ -24,8 +27,16 @@
                     templateUrl: 'templates/contact.html',
                     controller: 'ContactController'
                 })
+                .when('/work', {
+                    templateUrl: 'templates/work.html',
+                    controller: 'WorkController'
+                })
+                .when('/todo', {
+                    templateUrl: 'templates/todo.html',
+                    controller: 'TodoController'
+                })
                 .otherwise({
-                    redirectTo: 'home'
+                    redirectTo: 'todo'
                 });
         }
     ]);

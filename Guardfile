@@ -24,7 +24,7 @@
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
 
 guard 'livereload' do
-    watch(%r{app/.+\.(css|js|ejs|html)})
+    watch(%r{app/.+\.(css|js|ejs|html|md)})
   #watch(%r{app/views/.+\.(erb|haml|slim)$})
   #watch(%r{app/helpers/.+\.rb})
   #watch(%r{public/.+\.(css|js|html)})

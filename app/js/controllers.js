@@ -3,7 +3,6 @@
 
     var sawyerControllers = angular.module('sawyerControllers', []);
 
-
     sawyerControllers.controller('HomeController', ['$scope', '$routeParams',
             function($scope, $routeParams) {
             }]
@@ -23,4 +22,17 @@
             function($scope, $routeParams) {
             }]
     );
-})(angular);
+
+    sawyerControllers.controller('WorkController', ['$scope', '$routeParams',
+            function($scope, $routeParams) {
+            }]
+    );
+
+    sawyerControllers.controller('TodoController', ['$scope', '$routeParams', '$http',
+            function($scope, $routeParams, $http) {
+                $http.get('sources/todo.md').success(function(data) {
+                    $scope.markdown = data;
+                });
+            }]
+    );
+})(window.angular);
