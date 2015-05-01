@@ -1,8 +1,9 @@
 <html lang="en" ng-app="sawyerApp">
 <head>
     <meta charset="utf-8">
-    <title>any one</title>
+    <title>any way</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="favicon.ico"/>
 </head>
 <body>
@@ -10,7 +11,7 @@
         <div class="container-fluid">
             <div class="container-header">
                 <a class="navbar-brand" href="#/home" ng-click="changeHeader('home')">
-                    <img alt="SL" src="favicon.ico" style="width: 20px; height: 20px;"/>
+                    <img alt="SL" src="favicon.ico" class="brand"/>
                 </a>
             </div>
             <div class="collapse navbar-collapse">
@@ -20,7 +21,10 @@
             </div>
         </div>
     </nav>
-    <div style="margin: 10px;" ng-view></div>
+    <div class="main-view" ng-view></div>
+    <div class="main-footer">
+        <span>This website is powered by angularjs and developped by sawyer</span>
+    </div>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
