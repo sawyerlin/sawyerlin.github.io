@@ -3,6 +3,21 @@
 
     var sawyerControllers = angular.module('sawyerControllers', []);
 
+    sawyerControllers.controller('HeadController', ['$scope',
+            function($scope) {
+                $scope.headers = config.headers.contents;
+                $scope.changeHeader = function(headerValue) {
+                    if (config.headers.active === headerValue) return;
+                    if (config.headers.active) {
+                        $('#' + config.headers.active).removeClass('active');
+                    }
+
+                    $('#' + headerValue).addClass('active');
+                    config.headers.active = headerValue;
+                }
+            }]
+    );
+
     sawyerControllers.controller('HomeController', ['$scope', '$routeParams',
             function($scope, $routeParams) {
             }]
