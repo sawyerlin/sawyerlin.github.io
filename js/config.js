@@ -6,6 +6,10 @@ var config = {
                 value: 'home'
             },
             {
+                name: 'Tools',
+                value: 'tools'
+            },
+            {
                 name: 'Todo',
                 value: 'todo',
                 class: 'active'

@@ -15,6 +15,10 @@
                     templateUrl: 'templates/home.html',
                     controller: 'HomeController'
                 })
+                .when('/tools', {
+                    templateUrl: 'templates/tools.html',
+                    controller: 'ToolsController'
+                })
                 .when('/demos', {
                     templateUrl: 'templates/demos.html',
                     controller: 'DemosController'
