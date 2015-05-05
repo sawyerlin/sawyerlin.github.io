@@ -14,11 +14,16 @@
 
                     $('#' + headerValue).addClass('active');
                     config.headers.active = headerValue;
-                }
+                };
             }]
     );
 
     sawyerControllers.controller('HomeController', ['$scope', '$routeParams',
+            function($scope, $routeParams) {
+            }]
+    );
+
+    sawyerControllers.controller('ToolsController', ['$scope', '$routeParams',
             function($scope, $routeParams) {
             }]
     );
