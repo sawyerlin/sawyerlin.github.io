@@ -3,9 +3,23 @@
 
     var sawyerControllers = angular.module('sawyerControllers', []);
 
-    sawyerControllers.controller('HeadController', ['$scope',
+    sawyerControllers.controller('HeadController', ['$scope', 
             function($scope) {
                 $scope.headers = config.headers.contents;
+
+                var headerValue = window.location.hash.slice(2, window.location.hash.length);
+                if (headerValue.length && config.headers.active !== headerValue ) {
+                    var header = _.find($scope.headers, function(header) {
+                        return header.value === headerValue;
+                    });
+                    var oldHeader = _.find($scope.headers, function(header) {
+                        return header.value === config.headers.active;
+                    });
+                    header.class = oldHeader.class;
+                    delete oldHeader.class;
+                    config.headers.active = headerValue;
+                }
+
                 $scope.changeHeader = function(headerValue) {
                     if (config.headers.active === headerValue) return;
                     if (config.headers.active) {

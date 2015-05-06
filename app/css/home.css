@@ -1,0 +1,9 @@
+.description-block {
+    font-size: xx-large;
+    padding: 0 200px;
+}
+
+.description-block img{
+    max-height: 100%;
+    max-width: 100%;
+}

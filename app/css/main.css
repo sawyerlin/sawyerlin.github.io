@@ -1,3 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=EB+Garamond);
+
+html{
+    font-family: Garamond, EB Garamond, Georgia, serif;
+}
+
 .brand{
     width: 20px; 
     height: 20px;
@@ -5,7 +11,7 @@
 
 .main-view {
     position: absolute; 
-    top: 100px; 
+    top: 150px;
     left: 50px; 
     right: 50px;
 }
