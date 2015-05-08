@@ -1,36 +1,34 @@
 var config = {
     headers: {
-        contents: [
-            {
-                name: 'Home',
-                value: 'home'
+        contents: {
+            home: {
+                name: 'Home'
             },
-            {
+            tools: {
                 name: 'Tools',
-                value: 'tools'
+                contents: [
+                    {name: 'Compare', value: 'compare'},
+                    {name: 'Regular Expression', value: 'regex'},
+                    {name: 'Base 64', value: 'base64'}
+                ]
             },
-            {
+            todo: {
                 name: 'Todo',
-                value: 'todo',
                 class: 'active'
             },
-            {
-                name: 'Demos',
-                value: 'demos'
+            demos: {
+                name: 'Demos'
             },
-            {
-                name: 'Experiments',
-                value: 'experiments'
+            experiments: {
+                name: 'Experiments'
             },
-            {
-                name: 'Work',
-                value: 'work'
+            work: {
+                name: 'Work'
             },
-            {
-                name: 'Contact',
-                value: 'contact'
+            contact: {
+                name: 'Contact'
             }
-        ],
+        },
         active: 'todo' 
     }
 };
