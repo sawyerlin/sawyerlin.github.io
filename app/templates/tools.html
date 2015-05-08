@@ -1,5 +1,3 @@
 <ul class="nav nav-tabs">
-    <li role="presentation" class="active"><a>Compare</a></li>
-    <li role="presentation"><a>Regular Expression</a></li>
-    <li role="presentation"><a>Base 64</a></li>
+    <li ng-repeat="(key, value) in headers" role="presentation" class="{{value.class}}"><a>{{value.name}}</a></li>
 </ul>

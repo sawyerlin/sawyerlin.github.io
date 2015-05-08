@@ -36,6 +36,7 @@
 
     sawyerControllers.controller('ToolsController', ['$scope', '$routeParams',
             function($scope, $routeParams) {
+                $scope.headers = config.headers.contents[config.headers.active].contents;
             }]
     );
 

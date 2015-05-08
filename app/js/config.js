@@ -6,11 +6,11 @@ var config = {
             },
             tools: {
                 name: 'Tools',
-                contents: [
-                    {name: 'Compare', value: 'compare'},
-                    {name: 'Regular Expression', value: 'regex'},
-                    {name: 'Base 64', value: 'base64'}
-                ]
+                contents: {
+                    compare : {name: 'Compare', class: 'active'},
+                    regex: {name: 'Regular Expression'},
+                    base64: {name: 'Base 64'}
+                }
             },
             todo: {
                 name: 'Todo',
