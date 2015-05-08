@@ -9,12 +9,9 @@
 
                 var headerValue = window.location.hash.slice(2, window.location.hash.length);
                 if (headerValue.length && config.headers.active !== headerValue ) {
-                    var header = _.find($scope.headers, function(header) {
-                        return header.value === headerValue;
-                    });
-                    var oldHeader = _.find($scope.headers, function(header) {
-                        return header.value === config.headers.active;
-                    });
+                    var header = $scope.headers[headerValue];
+                    var oldHeader = $scope.headers[config.headers.active];
+                    
                     header.class = oldHeader.class;
                     delete oldHeader.class;
                     config.headers.active = headerValue;
