@@ -70,4 +70,10 @@
                 });
             }]
     );
+
+    sawyerControllers.controller('ThreeDSController', ['$scope', '$routeParams', '$http',
+            function($scope, $routeParams, $http) {
+            }]
+    );
+
 })(window.angular);
