@@ -39,8 +39,12 @@
                     templateUrl: 'templates/todo.html',
                     controller: 'TodoController'
                 })
+                .when('/threeds', {
+                    templateUrl: 'templates/threeds.html',
+                    controller: 'ThreeDSController'
+                })
                 .otherwise({
-                    redirectTo: 'todo'
+                    redirectTo: 'threeds'
                 });
         }
     ]);

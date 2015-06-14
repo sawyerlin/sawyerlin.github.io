@@ -13,8 +13,7 @@ var config = {
                 }
             },
             todo: {
-                name: 'Todo',
-                class: 'active'
+                name: 'Todo'
             },
             demos: {
                 name: 'Demos'
@@ -27,8 +26,17 @@ var config = {
             },
             contact: {
                 name: 'Contact'
+            },
+            threeds: {
+                name: '3DS',
+                class: 'active',
+                contents: {
+                    compare : {name: 'Compare', class: 'active'},
+                    regex: {name: 'Regular Expression'},
+                    base64: {name: 'Base 64'}
+                }
             }
         },
-        active: 'todo' 
+        active: 'threeds'
     }
 };
