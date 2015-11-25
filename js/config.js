@@ -27,16 +27,11 @@ var config = {
             contact: {
                 name: 'Contact'
             },
-            threeds: {
-                name: '3DS',
-                class: 'active',
-                contents: {
-                    compare : {name: 'Compare', class: 'active'},
-                    regex: {name: 'Regular Expression'},
-                    base64: {name: 'Base 64'}
-                }
+            record: {
+                name: 'Record',
+                class: 'active'
             }
         },
-        active: 'threeds'
+        active: 'work'
     }
 };
