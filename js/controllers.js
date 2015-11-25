@@ -10,8 +10,10 @@
                     var header = $scope.headers[headerValue];
                     var oldHeader = $scope.headers[config.headers.active];
                     
-                    header.class = oldHeader.class;
-                    delete oldHeader.class;
+                    if (header) {
+                        header.class = oldHeader.class;
+                        delete oldHeader.class;
+                    }
                     config.headers.active = headerValue;
                 }
 
@@ -71,7 +73,6 @@
 
     sawyerControllers.controller('RecordController', ['$scope', '$routeParams', '$http', 
             function($scope, $routeParams, $http) {
-                console.log($routeParams);
                 var name = $routeParams.name || 'index.md';
                 $http.get('sources/record/' + name).success(function(data) {
                     $scope.markdown = data;
