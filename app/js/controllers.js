@@ -1,8 +1,6 @@
 (function(angular) {
     'use strict';
-
     var sawyerControllers = angular.module('sawyerControllers', []);
-
     sawyerControllers.controller('HeadController', ['$scope', 
             function($scope) {
                 $scope.headers = config.headers.contents;
@@ -39,7 +37,7 @@
                 $scope.headers = config.headers.contents[config.headers.active].contents;
                 $scope.changeHeader = function(headerValue) {
 
-                }
+                };
             }]
     );
 
@@ -71,8 +69,13 @@
             }]
     );
 
-    sawyerControllers.controller('ThreeDSController', ['$scope', '$routeParams', '$http',
+    sawyerControllers.controller('RecordController', ['$scope', '$routeParams', '$http', 
             function($scope, $routeParams, $http) {
+                console.log($routeParams);
+                var name = $routeParams.name || 'index.md';
+                $http.get('sources/record/' + name).success(function(data) {
+                    $scope.markdown = data;
+                });
             }]
     );
 
