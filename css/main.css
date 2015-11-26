@@ -2,6 +2,7 @@
 
 html{
     font-family: Garamond, EB Garamond, Georgia, serif;
+    overflow: hidden;
 }
 
 .brand{
@@ -10,9 +11,12 @@ html{
 }
 
 .main-view {
+    overflow: auto;
     position: absolute; 
     left: 50px; 
     right: 50px;
+    bottom: 25px;
+    top: 100px;
 }
 
 .main-footer {
