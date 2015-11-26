@@ -14,7 +14,7 @@ html{
     overflow: auto;
     position: absolute; 
     left: 50px; 
-    right: 50px;
+    right: 0;
     bottom: 25px;
     top: 100px;
 }
