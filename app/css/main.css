@@ -3,6 +3,7 @@
 html{
     font-family: Garamond, EB Garamond, Georgia, serif;
     overflow: hidden;
+    background-color: #eeeeee;
 }
 
 .brand{
@@ -13,10 +14,18 @@ html{
 .main-view {
     overflow: auto;
     position: absolute; 
-    left: 50px; 
+    left: 0; 
     right: 0;
     bottom: 25px;
-    top: 100px;
+    top: 52px;
+}
+
+.main-view .record{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    padding: 15px;
 }
 
 .main-footer {
