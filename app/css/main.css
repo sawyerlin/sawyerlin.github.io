@@ -12,7 +12,8 @@ html{
 }
 
 .main-view {
-    overflow: auto;
+    overflow-y: auto;
+    overflow-: hidden;
     position: absolute; 
     left: 0; 
     right: 0;
