@@ -6,6 +6,10 @@ html{
     background-color: #eeeeee;
 }
 
+body {
+    background-color: #ffffff;
+}
+
 .brand{
     width: 20px; 
     height: 20px;
