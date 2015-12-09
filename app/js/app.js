@@ -11,9 +11,9 @@
             $markedProvider.setOptions({gfm: true});
 
             $routeProvider
-                .when('/home', {
-                    templateUrl: 'templates/home.html',
-                    controller: 'HomeController'
+                .when('/about', {
+                    templateUrl: 'templates/about.html',
+                    controller: 'AboutController'
                 })
                 .when('/tools', {
                     templateUrl: 'templates/tools.html',

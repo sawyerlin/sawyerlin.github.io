@@ -29,8 +29,11 @@
             }]
     );
 
-    sawyerControllers.controller('HomeController', ['$scope', '$routeParams',
-            function($scope, $routeParams) {
+    sawyerControllers.controller('AboutController', ['$scope', '$routeParams', '$http',
+            function($scope, $routeParams, $http) {
+                $http.get('sources/about.md').success(function(data) {
+                    $scope.markdown = data;
+                });
             }]
     );
 
