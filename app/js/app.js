@@ -15,26 +15,6 @@
                     templateUrl: 'templates/about.html',
                     controller: 'AboutController'
                 })
-                .when('/tools', {
-                    templateUrl: 'templates/tools.html',
-                    controller: 'ToolsController'
-                })
-                .when('/demos', {
-                    templateUrl: 'templates/demos.html',
-                    controller: 'DemosController'
-                })
-                .when('/experiments', {
-                    templateUrl: 'templates/experiments.html',
-                    controller: 'ExperimentsController'
-                })
-                .when('/contact', {
-                    templateUrl: 'templates/contact.html',
-                    controller: 'ContactController'
-                })
-                .when('/work', {
-                    templateUrl: 'templates/work.html',
-                    controller: 'WorkController'
-                })
                 .when('/todo', {
                     templateUrl: 'templates/todo.html',
                     controller: 'TodoController'
@@ -46,6 +26,10 @@
                 .when('/record/:name', {
                     templateUrl: 'templates/record.html',
                     controller: 'RecordController'
+                })
+                .when('/project', {
+                    templateUrl: 'templates/project.html',
+                    controller: 'ProjectController'
                 })
                 .otherwise({
                     redirectTo: 'record'
