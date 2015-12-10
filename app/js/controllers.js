@@ -47,15 +47,27 @@
 
     sawyerControllers.controller('ProjectController', ['$scope', '$routeParams', '$http',
         function($scope, $routeParams, $http) {
-            console.log('project controller');
-            $scope.loadProfile = function(profileName) {
-                $http.get('https://api.github.com/users/' + profileName).success(function(data) {
-                    $scope.profile = data;
+            $http.get('database/project/github/apis.json').success(function (data) {
+                $scope.baseUrl = data.baseUrl;
+                $scope.token = data.token;
+                $scope.apis = data.apis;
+                $http.defaults.headers.common.Authorization = 'token ' + data.token;
+                angular.forEach(data.apis, function(value) {
+                    value.response = undefined;
+                    $scope[value.name + value.method] = function() {
+                        $http({
+                            method: value.method,
+                            url: data.baseUrl + '/' + value.name
+                        }).then(function(response) {
+                            value.response = response.data;
+                        });
+                    };
+                    $scope[value.name + 'Clean'] = function() {
+                        value.response = null;
+                    };
                 });
-            };
-            $scope.cleanProfile = function() {
-                $scope.profile = null;
-            };
+
+            });
         }]
     );
 

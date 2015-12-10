@@ -1,0 +1,16 @@
+{
+    "baseUrl": "https://api.github.com",
+    "token": "d90d73942a1c9b8628361ea6427cb04919e3ede0",
+    "apis": [
+        {
+            "id": 0,
+            "name": "user",
+            "method": "GET"
+        },
+        {
+            "id": 0,
+            "name": "user/repos",
+            "method": "GET"
+        }
+    ]
+}
