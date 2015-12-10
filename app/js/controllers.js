@@ -49,9 +49,10 @@
         function($scope, $routeParams, $http) {
             $http.get('database/project/github/apis.json').success(function (data) {
                 $scope.baseUrl = data.baseUrl;
-                $scope.token = data.token;
                 $scope.apis = data.apis;
-                $http.defaults.headers.common.Authorization = 'token ' + data.token;
+                $scope.updateToken = function(token) {
+                    $http.defaults.headers.common.Authorization = 'token ' + token;
+                };
                 angular.forEach(data.apis, function(value) {
                     value.response = undefined;
                     $scope[value.name + value.method] = function() {
