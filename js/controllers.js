@@ -50,6 +50,12 @@
             $http.get('database/project/github/apis.json').success(function (data) {
                 $scope.baseUrl = data.baseUrl;
                 $scope.apis = data.apis;
+                $scope.login = function() {
+                    $http.get('https://github.com/login/oauth/authorize').success(function (data) {
+                console.log(data);
+                        
+                    });
+                };
                 $scope.updateToken = function(token) {
                     $http.defaults.headers.common.Authorization = 'token ' + token;
                 };
