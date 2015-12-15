@@ -1,6 +1,7 @@
 (function(angular) {
     'use strict';
     var sawyerControllers = angular.module('sawyerControllers', []);
+
     sawyerControllers.controller('HeadController', ['$scope', 
         function($scope) {
             $scope.headers = config.headers.contents;
@@ -47,13 +48,17 @@
 
     sawyerControllers.controller('ProjectController', ['$scope', '$routeParams', '$http',
         function($scope, $routeParams, $http) {
+            console.log($routeParams);
+
             $http.get('database/project/github/apis.json').success(function (data) {
                 $scope.baseUrl = data.baseUrl;
                 $scope.apis = data.apis;
                 $scope.login = function() {
-                    $http.get('https://github.com/login/oauth/authorize').success(function (data) {
-                console.log(data);
-                        
+                    $http({
+                        method: 'GET',
+                        url: 'https://github.com/login/oauth/authorize'
+                    }).then(function (response) {
+                        console.log(response);
                     });
                 };
                 $scope.updateToken = function(token) {
