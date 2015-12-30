@@ -48,8 +48,7 @@
 
     sawyerControllers.controller('ProjectController', ['$scope', '$routeParams', '$http',
         function($scope, $routeParams, $http) {
-            console.log($routeParams);
-
+        console.log('>>> test slin');
             $http.get('database/project/github/apis.json').success(function (data) {
                 $scope.baseUrl = data.baseUrl;
                 $scope.apis = data.apis;
