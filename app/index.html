@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="favicon.ico"/>
+    <base href="/">
 </head>
 <body>
     <nav class="navbar navbar-inverse" ng-controller="HeadController">
@@ -19,13 +20,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#/about" ng-click="changeHeader('about')">
+                <a class="navbar-brand" href="/about" ng-click="changeHeader('about')">
                     <img alt="SL" src="favicon.ico" class="brand"/>
                 </a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li ng-repeat="(key, value) in headers" id="{{key}}" class="{{value.class}}"><a href="#/{{key}}" ng-click="changeHeader(key)">{{value.name}}</a></li>
+                    <li ng-repeat="(key, value) in headers" id="{{key}}" class="{{value.class}}">
+                        <a href="/{{key}}" ng-click="changeHeader(key)">{{value.name}}</a>
+                    </li>
                 </ul>
             </div>
         </div>
