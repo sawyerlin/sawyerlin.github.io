@@ -11,10 +11,6 @@
             function($routeProvider, $locationProvider, $markedProvider) {
                 $markedProvider.setOptions({gfm: true});
                 $routeProvider
-                    .when('/', {
-                        templateUrl: 'templates/about.html',
-                        controller: 'AboutController'
-                    })
                     .when('/about', {
                         templateUrl: 'templates/about.html',
                         controller: 'AboutController'
@@ -34,6 +30,10 @@
                     .when('/project', {
                         templateUrl: 'templates/project.html',
                         controller: 'ProjectController'
+                    })
+                    .when('/sports', {
+                        templateUrl: 'templates/sports.html',
+                        controller: 'SportsController'
                     })
                     .otherwise({
                         redirectTo: 'record'

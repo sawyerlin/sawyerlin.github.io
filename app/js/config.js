@@ -13,6 +13,9 @@ var config = {
             record: {
                 name: 'Record',
                 class: 'active'
+            },
+            sports: {
+                name: 'Sports'
             }
         },
         active: 'record'

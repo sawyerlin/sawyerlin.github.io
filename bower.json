@@ -24,6 +24,7 @@
     "underscore": "~1.8.3"
   },
   "devDependencies": {
-    "bootstrap-social": "~4.11.0"
+    "bootstrap-social": "~4.11.0",
+    "angular-cookies": "~1.4.8"
   }
 }
