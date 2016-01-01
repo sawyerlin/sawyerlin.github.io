@@ -1,9 +1,15 @@
 (function(angular) {
     'use strict';
-    var sawyerControllers = angular.module('sawyerControllers', []);
+    var sawyerControllers = angular.module('sawyerControllers', ['ngCookies']);
+    sawyerControllers.config(['$httpProvider', function($httpProvider) {
+        $httpProvider.defaults.withCrendentials = true;
+    }]);
+    sawyerControllers.run(['$http', '$cookies', function($http, $cookies) {
+        $http.defaults.headers.post['X-CSRFToken'] = $cookie.csrftoken;
+    }]);
 
-    sawyerControllers.controller('HeadController', ['$scope', 
-        function($scope) {
+    sawyerControllers.controller('HeadController', ['$scope', '$location',
+        function($scope, $location) {
             $scope.headers = config.headers.contents;
 
             var headerValue = window.location.hash.slice(2, window.location.hash.length);
@@ -46,23 +52,34 @@
         }]
     );
 
+    sawyerControllers.controller('SportsController', ['$scope', '$routeParams', '$http',
+            function($scope, $routeParams, $http) {
+            }]
+    );
+
     sawyerControllers.controller('ProjectController', ['$scope', '$routeParams', '$http',
         function($scope, $routeParams, $http) {
-        console.log('>>> test slin');
+            if ($routeParams.code) {
+                $http({
+                    method: 'POST',
+                    url: 'https://github.com/login/oauth/access_token',
+                    headers: {
+                        'Access-Control-Allow-Origin': '*'
+                    },
+                    data: {
+                        client_id: '46c10955cb8b386227f8',
+                        client_secret: '7cee03fc34f61fb00fe2808e5278a861d3ca5fd9',
+                        code: $routeParams.code
+                    }
+                }).then(function(response) {
+                    console.log(response);
+                }, function(response) {
+                    console.log(response);
+                });
+            }
             $http.get('database/project/github/apis.json').success(function (data) {
                 $scope.baseUrl = data.baseUrl;
                 $scope.apis = data.apis;
-                $scope.login = function() {
-                    $http({
-                        method: 'GET',
-                        url: 'https://github.com/login/oauth/authorize'
-                    }).then(function (response) {
-                        console.log(response);
-                    });
-                };
-                $scope.updateToken = function(token) {
-                    $http.defaults.headers.common.Authorization = 'token ' + token;
-                };
                 angular.forEach(data.apis, function(value) {
                     value.response = undefined;
                     $scope[value.name + value.method] = function() {
@@ -70,6 +87,7 @@
                             method: value.method,
                             url: data.baseUrl + '/' + value.name
                         }).then(function(response) {
+                            console.log(response);
                             value.response = response.data;
                         });
                     };

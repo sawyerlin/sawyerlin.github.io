@@ -1,50 +1,41 @@
-module.exports = function(grunt){
+module.exports = function (grunt) {
   'use strict';
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('bower.json'),
-    jshint: {
-      options: { jshintrc: true },
-      all: ['gruntfile.js', '<%= pkg.name %>.js']
-    },
-    bump: {
+
+    'gh-pages': {
       options: {
-        files: ['bower.json','package.json'],
-        commit: true,
-        commitMessage: 'release %VERSION%',
-        commitFiles: ['package.json','bower.json','<%= pkg.name %>.min.js'], // '-a' for all files
-        pushTo: 'origin',
-      }
-    },
-    uglify: {
-      options: {
-        banner: '/*\n * <%= pkg.title || pkg.name %> <%= pkg.version %>\n' +
-          ' * (c) <%= grunt.template.today("yyyy") %> <%= pkg.authors.join(" ") %>\n' +
-          ' * Licensed <%= pkg.license %>\n */\n'
+        base: 'docs'
       },
-      src: {
-        files: {
-          '<%= pkg.name %>.min.js': '<%= pkg.name %>.js'
+      src: ['**']
+    },
+
+    ngdocs: {
+      options: {
+        html5Mode: false,
+        titleLink: '#/api',
+        navTemplate: './docs-template/nav.html',
+        scripts: [
+          './bower_components/angular/angular.js',
+          './bower_components/angular-animate/angular-animate.js',
+          './bower_components/marked/lib/marked.js',
+          './dist/<%= pkg.name %>.js',
+          './docs-template/script.js'
+        ],
+        discussions: {
+          shortName: 'hypercubedgithub',
+          url: 'http://hypercubed.github.io/<%= pkg.name %>/',
+          dev: false
         }
-      }
-    },
-    karma: {
-      unit: {
-        configFile: 'karma.conf.js'
       },
-      once: {
-        configFile: 'karma.conf.js',
-        singleRun: true,
-        browsers: ['PhantomJS']
-      }
+      all: ['lib/<%= pkg.name %>.js']
     }
+
   });
 
   require('load-grunt-tasks')(grunt);
 
-  grunt.registerTask('default', ['build','test']);
-  grunt.registerTask('build', ['jshint', 'uglify']);
-  grunt.registerTask('test', ['karma:once']);
-  grunt.registerTask('publish', ['test','bump-only','uglify','bump-commit']);
-
+  grunt.registerTask('build', ['ngdocs']);
+  grunt.registerTask('deploy', ['build', 'gh-pages']);
 };
