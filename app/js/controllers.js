@@ -5,7 +5,7 @@
         $httpProvider.defaults.withCrendentials = true;
     }]);
     sawyerControllers.run(['$http', '$cookies', function($http, $cookies) {
-        $http.defaults.headers.post['X-CSRFToken'] = $cookie.csrftoken;
+        $http.defaults.headers.post['X-CSRFToken'] = $cookies.csrftoken;
     }]);
 
     sawyerControllers.controller('HeadController', ['$scope', '$location',
@@ -63,14 +63,16 @@
                 $http({
                     method: 'POST',
                     url: 'https://github.com/login/oauth/access_token',
+                    withCredentials: true,
                     headers: {
-                        'Access-Control-Allow-Origin': '*'
+                        'Content-Type': 'application/json'
                     },
-                    data: {
+                    data: JSON.stringify({
                         client_id: '46c10955cb8b386227f8',
                         client_secret: '7cee03fc34f61fb00fe2808e5278a861d3ca5fd9',
                         code: $routeParams.code
-                    }
+                    }),
+                    responseType: 'json'
                 }).then(function(response) {
                     console.log(response);
                 }, function(response) {
