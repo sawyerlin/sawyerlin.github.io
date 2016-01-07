@@ -30,8 +30,8 @@
         }]
     );
 
-    sawyerControllers.controller('LoginCtonroller', ['$scope', '$routeParams', '$http',
-            function() {
+    sawyerControllers.controller('LoginController', ['$scope', '$routeParams', '$http',
+            function($scope, $routeParams, $http) {
                 if ($routeParams.code) {
                     $http({
                         method: 'POST',
