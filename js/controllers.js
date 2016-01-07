@@ -30,6 +30,31 @@
         }]
     );
 
+    sawyerControllers.controller('LoginCtonroller', ['$scope', '$routeParams', '$http',
+            function() {
+                if ($routeParams.code) {
+                    $http({
+                        method: 'POST',
+                        url: 'https://github.com/login/oauth/access_token',
+                        withCredentials: true,
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        data: JSON.stringify({
+                            client_id: '46c10955cb8b386227f8',
+                            client_secret: '7cee03fc34f61fb00fe2808e5278a861d3ca5fd9',
+                            code: $routeParams.code
+                        }),
+                        responseType: 'json'
+                    }).then(function(response) {
+                        console.log(response);
+                    }, function(response) {
+                        console.log(response);
+                    });
+                }
+            }]
+    );
+
     sawyerControllers.controller('AboutController', ['$scope', '$routeParams', '$http',
         function($scope, $routeParams, $http) {
             $http.get('sources/about.md').success(function(data) {
@@ -53,26 +78,6 @@
 
     sawyerControllers.controller('ProjectController', ['$scope', '$routeParams', '$http',
         function($scope, $routeParams, $http) {
-            if ($routeParams.code) {
-                $http({
-                    method: 'POST',
-                    url: 'https://github.com/login/oauth/access_token',
-                    withCredentials: true,
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    data: JSON.stringify({
-                        client_id: '46c10955cb8b386227f8',
-                        client_secret: '7cee03fc34f61fb00fe2808e5278a861d3ca5fd9',
-                        code: $routeParams.code
-                    }),
-                    responseType: 'json'
-                }).then(function(response) {
-                    console.log(response);
-                }, function(response) {
-                    console.log(response);
-                });
-            }
             $http.get('database/project/github/apis.json').success(function (data) {
                 $scope.baseUrl = data.baseUrl;
                 $scope.apis = data.apis;
