@@ -1,12 +1,6 @@
 (function(angular) {
     'use strict';
     var sawyerControllers = angular.module('sawyerControllers', ['ngCookies']);
-    sawyerControllers.config(['$httpProvider', function($httpProvider) {
-        $httpProvider.defaults.withCrendentials = true;
-    }]);
-    sawyerControllers.run(['$http', '$cookies', function($http, $cookies) {
-        $http.defaults.headers.post['X-CSRFToken'] = $cookies.csrftoken;
-    }]);
 
     sawyerControllers.controller('HeadController', ['$scope', '$location',
         function($scope, $location) {
