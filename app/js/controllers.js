@@ -32,6 +32,7 @@
 
     sawyerControllers.controller('LoginController', ['$scope', '$routeParams', '$http',
             function($scope, $routeParams, $http) {
+                console.log($routeParams);
                 if ($routeParams.code) {
                     $http({
                         method: 'POST',
