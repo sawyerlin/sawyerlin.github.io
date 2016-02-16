@@ -9,7 +9,6 @@
 
     sawyerApp.config(['$routeProvider','$locationProvider', 'markedProvider', 
             function($routeProvider, $locationProvider, $markedProvider) {
-                //$markedProvider.setOptions({gfm: true});
                 $routeProvider
                     .when('/about', {
                         templateUrl: 'templates/about.html',
@@ -38,7 +37,6 @@
                     .otherwise({
                         redirectTo: 'record'
                     });
-                //$locationProvider.html5Mode(true);
             }
     ]);
 
