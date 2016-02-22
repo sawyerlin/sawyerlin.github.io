@@ -32,8 +32,10 @@
 
     sawyerControllers.controller('LoginController', ['$scope', '$routeParams', '$http', '$location',
             function($scope, $routeParams, $http, $location) {
-                console.log($location.absUrl());
-                if ($routeParams.code) {
+                var url = $location.absUrl(),
+                    codeIndex = url.indexOf('code=');
+                if (codeIndex != -1) {
+                    var code = url.slice(codeIndex + 5);
                     $http({
                         method: 'POST',
                         url: 'https://github.com/login/oauth/access_token',
@@ -44,7 +46,7 @@
                         data: JSON.stringify({
                             client_id: '46c10955cb8b386227f8',
                             client_secret: '7cee03fc34f61fb00fe2808e5278a861d3ca5fd9',
-                            code: $routeParams.code
+                            code: code
                         }),
                         responseType: 'json'
                     }).then(function(response) {
