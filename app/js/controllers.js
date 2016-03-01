@@ -39,15 +39,10 @@
                     $http({
                         method: 'POST',
                         url: 'https://github.com/login/oauth/access_token',
-                        withCredentials: true,
                         headers: {
-                            'Content-Type': 'application/json'
+                            'Content-Type': 'application/x-www-form-urlencoded'
                         },
-                        data: JSON.stringify({
-                            client_id: '46c10955cb8b386227f8',
-                            client_secret: '7cee03fc34f61fb00fe2808e5278a861d3ca5fd9',
-                            code: code
-                        }),
+                        data: "client_id=46c10955cb8b386227f8&client_secret=7cee03fc34f61fb00fe2808e5278a861d3ca5fd9&code=" + code,
                         responseType: 'json'
                     }).then(function(response) {
                         console.log(response);
