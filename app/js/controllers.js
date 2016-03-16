@@ -30,33 +30,10 @@
         }]
     );
 
-    sawyerControllers.controller('LoginController', ['$scope', '$routeParams', '$http', '$location',
-            function($scope, $routeParams, $http, $location) {
-                var url = $location.absUrl(),
-                    codeIndex = url.indexOf('code=');
-                if (codeIndex != -1) {
-                    var code = url.slice(codeIndex + 5);
-                    $http({
-                        method: 'POST',
-                        url: 'https://github.com/login/oauth/access_token',
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded'
-                        },
-                        data: "client_id=46c10955cb8b386227f8&client_secret=7cee03fc34f61fb00fe2808e5278a861d3ca5fd9&code=" + code,
-                        responseType: 'json'
-                    }).then(function(response) {
-                        console.log(response);
-                    }, function(response) {
-                        console.log(response);
-                    });
-                }
-            }]
-    );
-
     sawyerControllers.controller('AboutController', ['$scope', '$routeParams', '$http',
         function($scope, $routeParams, $http) {
-            $http.get('sources/about.md').success(function(data) {
-                $scope.markdown = data;
+            $http.get('database/about/source.json').success(function (data) {
+                $scope.projects = data.projects;
             });
         }]
     );
