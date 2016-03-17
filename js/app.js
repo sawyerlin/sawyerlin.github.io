@@ -26,7 +26,7 @@
                         templateUrl: 'templates/record.html',
                         controller: 'RecordController'
                     })
-                    .when('/project', {
+                    .when('/project/:name', {
                         templateUrl: 'templates/project.html',
                         controller: 'ProjectController'
                     })

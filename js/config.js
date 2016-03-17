@@ -7,9 +7,6 @@ var config = {
             todo: {
                 name: 'Todo'
             },
-            project: {
-                name: 'Project'
-            },
             record: {
                 name: 'Record',
                 class: 'active'

@@ -53,26 +53,9 @@
 
     sawyerControllers.controller('ProjectController', ['$scope', '$routeParams', '$http',
         function($scope, $routeParams, $http) {
-            $http.get('database/project/github/apis.json').success(function (data) {
-                $scope.baseUrl = data.baseUrl;
-                $scope.apis = data.apis;
-                angular.forEach(data.apis, function(value) {
-                    value.response = undefined;
-                    $scope[value.name + value.method] = function() {
-                        $http({
-                            method: value.method,
-                            url: data.baseUrl + '/' + value.name
-                        }).then(function(response) {
-                            console.log(response);
-                            value.response = response.data;
-                        });
-                    };
-                    $scope[value.name + 'Clean'] = function() {
-                        value.response = null;
-                    };
-                });
-
-            });
+            var name = $routeParams.name || 'default';
+            console.log(name);
+            $scope.template = name + '.html';
         }]
     );
 
