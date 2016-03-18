@@ -6,5 +6,7 @@
 node_modules/
 
 # config
-
 app/config/*
+
+# tags
+tags

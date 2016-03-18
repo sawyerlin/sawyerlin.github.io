@@ -4,15 +4,19 @@
             "id": "0",
             "name": "Android Dictionary & Input Method",
             "description": "This project contains two Android programs, one is Dictionary and another one is custom keyboard, from the image, you could find that \"111\" represent \"c\" and \"6\" represent \"l\", that means you can custom your keyboard code freely.",
-            "image": "database/about/images/out.gif",
-            "url": ""
+            "image": "database/about/images/out.gif"
         },
         {
             "id": "1",
             "name": "Gif Generator",
-            "description": "Do you want to generate your gif file easily from the video that you have, then this solution will help you to accomplish that. The entrypoint will be available soon.",
-            "image": "database/about/images/coming-soon.jpg",
-            "url": ""
+            "description": "Do you want to generate your gif file easily from the video that you have, then this solution will help you to accomplish that.",
+            "image": "database/about/images/gif-generator.gif"
+        },
+        {
+            "id": "",
+            "name": "Comming Soon",
+            "description": "",
+            "image": "database/about/images/coming-soon.jpg"
         }
     ]
 }

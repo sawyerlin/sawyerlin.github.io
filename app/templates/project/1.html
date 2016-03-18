@@ -1,19 +1,25 @@
-<div class="page-header">
-    <h1>Page Gif Convertor</h1>
-</div>
-<ul class="list-group">
-    <li class="list-group-item">
-        file1.mp4
-        <span class="label label-success">Success</span>
-    </li>
-    <li class="list-group-item">
-        file2.mp4
-        <span class="label label-danger">Failure</span>
-    </li>
-</ul>
-<div class="progress">
-    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-        <span class="sr-only">60% Complete</span>
+<div ng-controller="GifgeneratorController">
+    <div class="page-header">
+        <h1>Gif Generator</h1>
     </div>
-</div>
-<a href="#" class="btn btn-primary" role="button">Upload</a>
+    <!--TODO: implement progress bar-->
+    <!--
+       -<div class="progress">
+       -    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+       -        <span class="sr-only">60% Complete</span>
+       -    </div>
+       -</div>
+       -->
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-info">
+        The uploaded file will shown in the following
+        </li>
+        <li class="list-group-item" ng-repeat="file in files">
+        <span>{{file.name}}</span>
+        <span class="pull-right glyphicon glyphicon-{{file.state}}" ng-click="upload(file)"></span>
+        </li>
+    </ul>
+    <a class="btn btn-primary" role="button" ng-click="select()">Choose Files</a>
+    <a class="btn btn-primary" role="button" ng-click="empty()">Empty List</a>
+    <input type="file" id="fileinput" multiple="multiple" style="display: none;" />
+<div>

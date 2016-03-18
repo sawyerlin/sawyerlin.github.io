@@ -30,6 +30,10 @@
                         templateUrl: 'templates/project.html',
                         controller: 'ProjectController'
                     })
+                    .when('/player', {
+                        templateUrl: 'templates/player.html',
+                        controller: 'PlayerController'
+                    })
                     .when('/sports', {
                         templateUrl: 'templates/sports.html',
                         controller: 'SportsController'
