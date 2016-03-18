@@ -16,5 +16,6 @@ var config = {
             }
         },
         active: 'record'
-    }
+    },
+    serverPath: 'http://localhost:3000/'
 };
