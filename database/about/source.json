@@ -2,9 +2,9 @@
     "projects": [
         {
             "id": "0",
-            "name": "Android Dictionary & Input Method",
+            "name": "Android Blind Input Method",
             "description": "This project contains two Android programs, one is Dictionary and another one is custom keyboard, from the image, you could find that \"111\" represent \"c\" and \"6\" represent \"l\", that means you can custom your keyboard code freely.",
-            "image": "database/about/images/out.gif"
+            "image": "database/about/images/demo.gif"
         },
         {
             "id": "1",
