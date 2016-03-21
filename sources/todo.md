@@ -14,3 +14,14 @@
     
 - Technique problems (slin)
   - Where to store these information
+
+# Update Informations
+专业定制VBA.为CAC40公司RH部门自动化Office(Excel, Word)日常工作.
+
+网站建设 (personal website)
+
+手机应用 (Android, IPhone, Windows Phone)
+
+已做项目:
+Android 自定义键盘 & 手机词典
+
