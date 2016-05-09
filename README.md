@@ -2,4 +2,4 @@
 
 > Push to master
 
-    $ git subtree push --prefix app origin master
+    $ grunt

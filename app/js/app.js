@@ -41,6 +41,10 @@
                     .otherwise({
                         redirectTo: 'record'
                     });
+                $markedProvider.setOptions({
+                    gfm: true,
+                    tables: true
+                });
             }
     ]);
 
