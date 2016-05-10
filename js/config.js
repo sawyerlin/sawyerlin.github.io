@@ -2,20 +2,20 @@ var config = {
     headers: {
         contents: {
             about: {
-                name: 'About'
+                name: 'About',
+                class: 'active'
             },
             todo: {
                 name: 'Todo'
             },
             record: {
-                name: 'Record',
-                class: 'active'
+                name: 'Record'
             },
             sports: {
                 name: 'Sports'
             }
         },
-        active: 'record'
+        active: 'about'
     },
     serverPath: 'http://localhost:3000/'
 };

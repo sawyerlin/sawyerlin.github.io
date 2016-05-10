@@ -18,14 +18,6 @@
                         templateUrl: 'templates/todo.html',
                         controller: 'TodoController'
                     })
-                    .when('/record', {
-                        templateUrl: 'templates/record.html',
-                        controller: 'RecordController'
-                    })
-                    .when('/record/:name', {
-                        templateUrl: 'templates/record.html',
-                        controller: 'RecordController'
-                    })
                     .when('/project/:name', {
                         templateUrl: 'templates/project.html',
                         controller: 'ProjectController'
@@ -39,7 +31,7 @@
                         controller: 'SportsController'
                     })
                     .otherwise({
-                        redirectTo: 'record'
+                        redirectTo: '/about'
                     });
                 $markedProvider.setOptions({
                     gfm: true,

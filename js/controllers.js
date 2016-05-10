@@ -29,7 +29,6 @@
             $scope.changeHeader = function(headerValue) {
                 if (config.headers.active === headerValue) return;
                 if (config.headers.active) {
-                    console.log('strange here');
                     $('#' + config.headers.active).removeClass('active');
                 }
 
@@ -131,15 +130,6 @@
                     }
                 };
             }]
-    );
-
-    sawyerControllers.controller('RecordController', ['$scope', '$routeParams', '$http', 
-        function($scope, $routeParams, $http) {
-            var name = $routeParams.name || 'index.md';
-            $http.get('sources/record/' + name).success(function(data) {
-                $scope.markdown = data;
-            });
-        }]
     );
 
 })(window.angular);
