@@ -216,6 +216,7 @@ blockquote > :last-child {
 }
 
 table {
+    border-collapse: collapse;
     padding: 0;
 }
 table tr {
