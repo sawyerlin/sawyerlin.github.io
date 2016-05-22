@@ -27,3 +27,7 @@
 #### Preparation
 
 > [Prepare](#/record/2016_04_30_15_03.md)
+
+### Pyrénées GR10
+
+> [Ivy's article](#/record/2016_05_22_12_00.md)
