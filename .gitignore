@@ -10,3 +10,6 @@ app/config/*
 
 # tags
 tags
+
+# scripts
+scripts/images
