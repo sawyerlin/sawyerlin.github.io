@@ -9,11 +9,23 @@
     <body>
         <a href="/" class="fa fa-home fa-4" style="top: 50px; right: 30px; position: absolute; font-size: 5em;"></a>
         <div class="container" ng-view></div>
+        <div id="disqus_thread"></div>
         <script src="../bower_components/marked/lib/marked.js"></script>
         <script src="../bower_components/angularjs/angular.js"></script>
         <script src="../bower_components/angular-route/angular-route.js"></script>
         <script src="../bower_components/angular-marked/dist/angular-marked.min.js"></script>
         <script src="../js/recordApp.js"></script>
         <script src="../js/recordControllers.js"></script>
+        <script>
+(function() {
+    var d = document, 
+    s = d.createElement('script');
+
+    s.src = '//sawyerlin.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+        </script>       
     </body>
 </html>
