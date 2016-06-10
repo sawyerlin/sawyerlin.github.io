@@ -18,6 +18,8 @@
                 var name = $routeParams.name || 'index.md',
                     identifier = name === 'index.md' ? 1 : parseInt(name.replace('.md', '').replace(new RegExp('_', 'g'), ''));
 
+                console.log(identifier);
+
                 $scope.disqusConfig = {
                     disqus_shortname: 'sawyerlin',
                     disqus_identifier: identifier,

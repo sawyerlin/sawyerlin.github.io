@@ -10,7 +10,7 @@
 
     recordApp.config(['$routeProvider','$locationProvider', 'markedProvider',
         function($routeProvider, $locationProvider, $markedProvider) {
-            //$locationProvider.hashPrefix('!');
+            $locationProvider.hashPrefix('!');
             $routeProvider.when('/', {
                 templateUrl: '../templates/record.html',
                 controller: 'RecordController'
