@@ -15,10 +15,12 @@
 
     recordControllers.controller('RecordController', ['$scope', '$routeParams', '$http',
             function($scope, $routeParams, $http) {
-                var name = $routeParams.name || 'index.md';
+                var name = $routeParams.name || 'index.md',
+                    identifier = name === 'index.md' ? 1 : parseInt(name.replace('.md', '').replace(new RegExp('_', 'g'), ''));
+
                 $scope.disqusConfig = {
                     disqus_shortname: 'sawyerlin',
-                    disqus_identifier: name === 'index.md' ? 1 : parseInt(name.replace('.md', '').replace(new RegExp('_', 'g'), '')),
+                    disqus_identifier: identifier,
                     disqus_url: window.location.href
                 };
                 $http.get('../sources/record/' + name).success(function(data) {
