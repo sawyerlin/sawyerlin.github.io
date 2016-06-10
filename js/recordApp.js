@@ -4,11 +4,13 @@
     var recordApp = angular.module('recordApp', [
         'ngRoute',
         'recordControllers',
-        'hc.marked'
+        'hc.marked',
+        'angularUtils.directives.dirDisqus'
         ]);
 
     recordApp.config(['$routeProvider','$locationProvider', 'markedProvider',
         function($routeProvider, $locationProvider, $markedProvider) {
+            //$locationProvider.hashPrefix('!');
             $routeProvider.when('/', {
                 templateUrl: '../templates/record.html',
                 controller: 'RecordController'
