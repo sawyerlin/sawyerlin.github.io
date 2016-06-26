@@ -1,0 +1,27 @@
+{
+  "name": "slin-floattools",
+  "version": "0.1.0",
+  "homepage": "",
+  "authors": [
+    "Sawyer LIN<sawyer.lin@gmail.com>"
+  ],
+  "description": "A directive to show float tools.",
+  "main": ["floattools.js"],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angularjs",
+    "floattools",
+    "directive",
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
