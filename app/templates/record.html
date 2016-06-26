@@ -1,8 +1,5 @@
-<a href="/" class="fa fa-home fa-4" style="top: 40px; left: 5px; position: fixed; font-size: 3em;"></a>
-<a href="/record.html#/" class="fa fa-arrow-circle-o-left fa-4" style="top: 90px; left: 5px; position: fixed; font-size: 3em;" ng-hide="disqusConfig.disqus_identifier===1"></a>
-<a href="" class="fa fa-arrow-circle-up fa-4" style="top: 140px; left: 5px; position: fixed; font-size: 3em;" ng-hide="disqusConfig.disqus_identifier===1" onclick="$('html, body').animate({scrollTop: 0});"></a>
-<a href="" class="fa fa-comment fa-4" style="top: 190px; left: 5px; position: fixed; font-size: 3em;" ng-hide="disqusConfig.disqus_identifier===1" onclick="$('html, body').animate({scrollTop: $('#disqus_thread').offset().top});"></a>
-<div style="margin-left: 20px;">
-    <div class="record" marked="markdown"></div>
-    <dir-disqus config="disqusConfig" ng-hide="disqusConfig.disqus_identifier===1"></dir-disqus>
+<div class="row">
+    <floattools class="col-md-1"></floattools>
+    <div class="record col-md-11" marked="markdown"></div>
 </div>
+<dir-disqus config="disqusConfig" ng-hide="disqusConfig.disqus_identifier===1"></dir-disqus>

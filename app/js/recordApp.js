@@ -5,7 +5,8 @@
         'ngRoute',
         'recordControllers',
         'hc.marked',
-        'angularUtils.directives.dirDisqus'
+        'angularUtils.directives.dirDisqus',
+        'slin.directives.floattools'
         ]);
 
     recordApp.config(['$routeProvider','$locationProvider', 'markedProvider',
