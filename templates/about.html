@@ -6,7 +6,7 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-md-3" ng-repeat="project in projects">
-            <a class="thumbnail" href="#/project/{{project.id}}">
+            <a class="thumbnail" href="{{project.link}}">
                 <img ng-src="{{project.image}}">
                 <div class="caption">
                     <h3>{{project.name}}</h3>
