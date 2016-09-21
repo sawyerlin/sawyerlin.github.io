@@ -39,3 +39,7 @@
 ### Bone Break Treatement
 
 > [Bone Break](#!/record/2016_07_11_12_30.md)
+
+### FreeBox Qml Debug From linux PC
+
+> [](#!/record/2016_09_21_12_21.md)
