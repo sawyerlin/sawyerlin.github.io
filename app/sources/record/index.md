@@ -42,4 +42,4 @@
 
 ### FreeBox Qml Debug From linux PC
 
-> [](#!/record/2016_09_21_12_21.md)
+> [FreeBox Qml Debug From linux PC](#!/record/2016_09_21_12_21.md)
