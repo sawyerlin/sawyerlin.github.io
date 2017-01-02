@@ -7,6 +7,8 @@
             'hc.marked'
     ]);
 
+    // ui-router 
+    // x-editable
     sawyerApp.config(['$routeProvider','$locationProvider', 'markedProvider', 
             function($routeProvider, $locationProvider, $markedProvider) {
                 $routeProvider
