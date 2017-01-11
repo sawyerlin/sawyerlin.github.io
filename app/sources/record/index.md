@@ -49,3 +49,7 @@
 ###  Qml Keys.Pressed event id and name correspondance
 
 > [Qml Keys.Pressed event id and name correspondance](#!/record/2017_01_02_15_33.md)
+
+### Build your QML application on Android, ios
+
+> [Build your QML application on Android, ios](#!/record/2017_01_11_15_33.md)
