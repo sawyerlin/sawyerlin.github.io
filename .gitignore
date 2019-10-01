@@ -13,3 +13,6 @@ tags
 
 # scripts
 scripts/images
+
+# logs
+*.log
