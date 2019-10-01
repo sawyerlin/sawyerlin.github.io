@@ -16,9 +16,9 @@
                         templateUrl: 'templates/about.html',
                         controller: 'AboutController'
                     })
-                    .when('/todo', {
-                        templateUrl: 'templates/todo.html',
-                        controller: 'TodoController'
+                    .when('/myworks', {
+                        templateUrl: 'templates/myworks.html',
+                        controller: 'MyWorksController'
                     })
                     .when('/project/:name', {
                         templateUrl: 'templates/project.html',

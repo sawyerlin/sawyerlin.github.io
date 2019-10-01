@@ -5,14 +5,11 @@ var config = {
                 name: 'About',
                 class: 'active'
             },
-            todo: {
-                name: 'Todo'
+            myworks: {
+                name: 'My Works'
             },
             record: {
                 name: 'Record'
-            },
-            sports: {
-                name: 'Sports'
             }
         },
         active: 'about'
