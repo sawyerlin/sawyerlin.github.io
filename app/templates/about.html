@@ -7,6 +7,132 @@
 <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
     integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
 <style>
+    @media print {
+
+        body,
+        .sanserif {
+            font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+        }
+
+        a[href]:after {
+            content: none !important;
+        }
+
+        p,
+        .serif {
+            font-family: "Cardo", Georgia, serif;
+        }
+
+        .resume {
+            background-color: blanchedalmond;
+            display: flex;
+            align-items: stretch;
+        }
+
+        .resume .about {
+            background-color: chocolate;
+            flex-basis: 30%;
+            width: 80mm;
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+
+        .resume .about .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .resume .about .header .avatar {
+            width: 48px;
+            height: 48px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: blueviolet;
+        }
+
+        .resume .about .header .basic-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resume .about .header .basic-info .name {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+        .resume .about .header .basic-info .description {
+            font-size: 1.5rem;
+        }
+
+        .resume .about .info {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .resume .about .info .item {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            margin: 5px;
+        }
+
+        .resume .about .info .item i {
+            margin-right: 10px;
+        }
+
+        .resume .about .info .item a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .resume .detail {
+            flex-basis: 70%;
+            width: 130mm;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resume .detail .section {
+            margin: 10px;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .chips .chip {
+            padding: 10px 5px;
+            border-style: solid;
+            border-radius: 5px;
+            border-width: 1px;
+            margin: 0 5px 5px 0;
+        }
+
+        .experience {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin: 10px 10px 0 10px;
+            border-top: 1px solid black;
+        }
+
+        .stack {
+            margin-left: 20px;
+        }
+
+        .stack span {
+            font-weight: bolder;
+        }
+    }
+
     body,
     .sanserif {
         font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
@@ -25,7 +151,7 @@
 
     .resume .about {
         background-color: chocolate;
-        flex-basis: 30%;
+        flex-basis: 32%;
         display: flex;
         flex-direction: column;
         color: white;
@@ -84,7 +210,7 @@
     }
 
     .resume .detail {
-        flex-basis: 70%;
+        flex-basis: 68%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -128,7 +254,8 @@
 <div class="resume">
     <div class="about">
         <div class="header">
-            <img src="https://media.licdn.com/dms/image/C5603AQEa5aS9Ohcn4g/profile-displayphoto-shrink_100_100/0?e=1575504000&v=beta&t=0NVi7EGeQvro1fktJUZdw2UJHv8wjo_ETGkYYiU2bHs" class="avatar"/>
+            <img src="https://media.licdn.com/dms/image/C5603AQEa5aS9Ohcn4g/profile-displayphoto-shrink_100_100/0?e=1575504000&v=beta&t=0NVi7EGeQvro1fktJUZdw2UJHv8wjo_ETGkYYiU2bHs"
+                class="avatar" />
             <div class="basic-info">
                 <span class="name">Da LIN</span>
                 <small class="description">Freelance Software Engineer</small>
@@ -142,15 +269,15 @@
             </div>
             <div class="item">
                 <i class="fa fa-envelope" title="Email"></i>
-                <a href="mailto:sawyer.lin@gmail.com">sawyer.lin.email</a>
+                <a href="mailto:sawyer.lin@gmail.com">da.lin.email</a>
             </div>
             <div class="item">
                 <i class="fa fa-globe-americas" title="WebSite"></i>
-                <a href="https://sawyerlin.github.io" target="_blank">sawyer.lin.site</a>
+                <a href="https://sawyerlin.github.io" target="_blank">da.lin.site</a>
             </div>
             <div class="item">
                 <i class="fab fa-github" title="GitHub"></i>
-                <a href="https://github.com/sawyerlin" target="_blank">sawyer.lin.github</a>
+                <a href="https://github.com/sawyerlin" target="_blank">da.lin.github</a>
             </div>
         </div>
         <div class="info">
@@ -158,11 +285,12 @@
             <div class="chips">
                 <span class="chip">.net</span>
                 <span class="chip">golang</span>
-                <span class="chip">angular</span>
-                <span class="chip">javascript/typescript</span>
-                <span class="chip">spark</span>
-                <span class="chip">python</span>
+                <span class="chip">javascript</span>
+                <span class="chip">typescript</span>
                 <span class="chip">scala</span>
+                <span class="chip">python</span>
+                <span class="chip">angular</span>
+                <span class="chip">spark</span>
                 <span class="chip">kubernetes</span>
                 <span class="chip">docker</span>
                 <span class="chip">mssql</span>
@@ -178,6 +306,23 @@
                 <span class="chip">English</span>
             </div>
         </div>
+        <div class="info">
+            <h4>Eduction</h4>
+            <div>
+                <div>
+                    <h5>SUPINFO (France)</h5>
+                    <h6>M.S.C - Computer Engineering</h6>
+                </div>
+                <span>2010 - 2011</span>
+            </div>
+            <div>
+                <div>
+                    <h5>SDUST (China)</h5>
+                    <h6>Bachelor - Computer Science</h6>
+                </div>
+                <span>2006 - 2010</span>
+            </div>
+        </div>
     </div>
     <div class="detail">
         <div class="section">
@@ -185,16 +330,16 @@
             <div class="experience">
                 <div>
                     <h5>Lintelligence Technology Pte. Ltd. (Singapore)</h5>
-                    <h6>Founder</h6>
+                    <h6>Co-Founder</h6>
                 </div>
                 <span>2018 - Present</span>
                 <ul>
                     <li>Apply Big data on Finance PreTrade</li>
-                    <li>Deploy BigData Environment in Local Kubernetes cluster and Azure Kubernetes Service</li>
+                    <li>Deploy BigData Environment in Local Kubernetes cluster (ubuntu) and Azure Kubernetes Service</li>
                 </ul>
                 <div class="stack">
                     <span>Stacks: </span>
-                    python, angular, spark, kafka, zookeeper, kubernetes, helm, docker, azure
+                    python, angular, spark, kafka, zookeeper, ubuntu, kubernetes, helm, azure
                 </div>
             </div>
             <div class="experience">
@@ -210,39 +355,43 @@
                 </ul>
                 <div class="stack">
                     <span>Stacks: </span>
-                    .Net(C#, WPF, WCF), SqlServer, Rabbitmq, Scala, Spark
+                    .Net(C#, WPF, WCF), SqlServer, Rabbitmq, Scala, Spark, windows, docker
                 </div>
             </div>
             <div class="experience">
                 <div>
-                    <h5>Hubee (France, Subsidary Company of Alpha Networks)</h5>
+                    <h5>Hubee (France)</h5>
                     <h6>Software Engineer</h6>
                 </div>
                 <span>2013 - 2017</span>
                 <ul>
                     <li>
-                        Creation of many mainstream embedded VOD Apps for France Market
+                        Creation of many mainstream embedded VOD Apps in France Market (CanalPlay, ArteVOD etc...)
+                    </li>
+                    <li>
+                        Deployment and Maintenance application in linux
                     </li>
                 </ul>
                 <div class="stack">
                     <span>Stacks: </span>
-                    Javascript, QML, PHP, MySQL 
+                    Javascript, QML, PHP, MySQL, Debian
                 </div>
             </div>
             <div class="experience">
                 <div>
-                    <h5>Mediatvcom (France, 42 Consulting)</h5>
+                    <h5>Mediatvcom (France)</h5>
                     <h6>Software Engineer</h6>
                 </div>
                 <span>2011 - 2013</span>
                 <ul>
                     <li>
-                        Development of Content Management and Distribution System which support more than 1000 medias' (Video, Image) import and export each day
+                        Development of Content Management and Distribution System which support more than 1000 medias'
+                        (Video, Image) import and export each day
                     </li>
                 </ul>
                 <div class="stack">
                     <span>Stacks: </span>
-                    .Net(C#, ASP.Net, WCF), SqlServer, javascript
+                    .Net(C#, ASP.Net, WCF), SqlServer, javascript, Windows
                 </div>
             </div>
         </div>
@@ -253,27 +402,9 @@
                 <p>Singapore based event organizer platform</p>
                 <div>
                     <span style="font-weight: bolder;">Stacks: </span>
-                    golang, angular, postgresql, firebase, mailgun
+                    golang, angular, postgresql, firebase, mailgun, raspbian
                 </div>
             </div>
         </div>
-        <div class="section">
-            <h4>Eduction</h4>
-            <div class="experience">
-                <div>
-                    <h5>SUPINFO (France)</h5>
-                    <h6>M.S.C - Computer Engineering</h6>
-                </div>
-                <span>2010 - 2011</span>
-            </div>
-            <div class="experience">
-                <div>
-                    <h5>SDUST (China) - SUPINFO (France)</h5>
-                    <h6>Bachelor - Computer Science</h6>
-                </div>
-                <span>2006 - 2010</span>
-            </div>
-        </div>
-        
     </div>
 </div>
