@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "cors": "~2.7.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "gm": "^1.23.1",
     "grunt": "~0.4.5",
     "grunt-exec": "~0.4.6",
